@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para o Amor da Minha Vida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fff5f5;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #5d3a3a;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    .cronometro {
+      font-size: 1.5rem;
+      margin: 30px 0;
+      font-weight: bold;
+    }
+    .spotify {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Imagem 1 no topo -->
+  <img src="imagem1.jpg" alt="Imagem 1" />
+
+  <h1>Para o amor da minha vida</h1>
+
+  <p>
+    Você é a melhor coisa que me aconteceu. 25/10 é a data do nosso namoro, mas eu já te amava antes disso.<br><br>
+    Você é minha melhor escolha, o amor da minha vida. Nunca acreditei em contos, fábulas, mas desde o dia que te conheci vivo uma com você.<br><br>
+    Você é minha princesinha, meu amor, minha dentista, minha cantora favorita. Te quero para sempre. Agora como namorada, depois noiva e eternamente minha esposa.<br><br>
+    Você não faz ideia do quanto me faz bem. Faltam palavras para te explicar. Vejo minha oração em cada detalhe seu.<br><br>
+    Você é a compilação de tudo de bom que existe no mundo. É a própria explicação para todos os adjetivos que faltam para te descrever.<br><br>
+    Como disse o Chorão, todo dia se eu pudesse eu ia estar com você. Queria poder te emprestar meus olhos para você ver como eu te vejo. Diria que você tem a chave do meu coração, mas estaria errado, já que você nunca precisou dela.<br><br>
+    Te dedicar Por Você de Barão Vermelho é pouco. Você merece mais que um Amor Puro do Djavan.<br><br>
+    Te amo, meu amor!
+  </p>
+
+  <div class="spotify">
+    <iframe 
+      style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/5yEais1zgeW1MjLrx7tsie?utm_source=generator" 
+      width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" 
+      loading="lazy"></iframe>
+  </div>
+
+  <div class="cronometro" id="cronometro">
+    Juntos há: 0 dias, 0 horas, 0 minutos e 0 segundos
+  </div>
+
+  <!-- Imagem 2 após o cronômetro -->
+  <img src="imagem2.jpg" alt="Imagem 2" />
+
+  <script>
+    const inicio = new Date('2024-10-25T00:00:00');
+    function atualizarCronometro() {
+      const agora = new Date();
+      const diff = agora - inicio;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+      document.getElementById('cronometro').textContent = 
+        `Juntos há: ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    }
+    setInterval(atualizarCronometro, 1000);
+    atualizarCronometro();
+  </script>
+</body>
+</html>
